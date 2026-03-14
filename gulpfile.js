@@ -61,6 +61,67 @@ function compileTemplate(templatePath, data, title) {
   });
 }
 
+// Generate index.html with links to all built templates per brand
+function generateIndex(templates) {
+  const brands = ['tpg', 'iinet'];
+
+  function slugToLabel(slug) {
+    return slug
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, c => c.toUpperCase())
+      .replace(/\bNbn\b/g, 'NBN')
+      .replace(/\bFttb\b/gi, 'FTTB')
+      .replace(/\bFttc\b/gi, 'FTTC')
+      .replace(/\bFtth\b/gi, 'FTTH')
+      .replace(/\bFttn\b/gi, 'FTTN')
+      .replace(/\bFttp\b/gi, 'FTTP')
+      .replace(/\bFttr\b/gi, 'FTTR')
+      .replace(/\bHfc\b/gi, 'HFC')
+      .replace(/\bOtp\b/gi, 'OTP')
+      .replace(/\bMas\b/gi, 'MAS')
+      .replace(/\bAlltech\b/gi, 'AllTech')
+      .replace(/\bFttbnc\b/gi, 'FTTBNC')
+      .replace(/\bHbs\b/gi, '')
+      .replace(/\bByo\b/gi, 'BYO');
+  }
+
+  const sorted = [...templates].sort();
+
+  let brandSections = brands.map(brand => {
+    const links = sorted.map(t =>
+      `        <li><a href="${brand}/${t}.html">${slugToLabel(t)}</a></li>`
+    ).join('\n');
+    return `      <h2>${brand.toUpperCase()}</h2>\n      <ul>\n${links}\n      </ul>`;
+  }).join('\n');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Templates Index</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, Helvetica, sans-serif; background: #f4f4f4; color: #333; padding: 40px 20px; }
+    .container { max-width: 960px; margin: 0 auto; }
+    h1 { font-size: 28px; margin-bottom: 32px; }
+    h2 { font-size: 22px; margin: 24px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #ddd; }
+    ul { list-style: none; columns: 2; column-gap: 32px; }
+    li { padding: 6px 0; break-inside: avoid; }
+    a { color: #1a0dab; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @media (max-width: 600px) { ul { columns: 1; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Email Templates</h1>
+${brandSections}
+  </div>
+</body>
+</html>`;
+}
+
 // Build task
 gulp.task('build', gulp.series('copy-images', function() {
   // Register all partials
@@ -73,7 +134,10 @@ gulp.task('build', gulp.series('copy-images', function() {
   });
   
   const brands = ['iinet', 'tpg'];
-  const templates = ['baseline'];
+  const configsDir = path.join(__dirname, 'src', 'templates', 'configs');
+  const templates = fs.readdirSync(path.join(__dirname, 'src', 'templates'))
+    .filter(f => f.endsWith('.hbs'))
+    .map(f => path.basename(f, '.hbs'));
   
   const buildTasks = [];
   
@@ -85,17 +149,19 @@ gulp.task('build', gulp.series('copy-images', function() {
     templates.forEach((template) => {
       const templatePath = path.join(__dirname, 'src', 'templates', `${template}.hbs`);
       
+      let templateConfig = {};
+      const configPath = path.join(configsDir, `${template}.json`);
+      if (fs.existsSync(configPath)) {
+        templateConfig = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+      }
+      
       const templateData = {
         brand: brandConfig,
         brandName: brand,
-        name: 'NAME',
-        payment: {
-          accountNumber: '100010531',
-          overdueAmount: '$62.67'
-        }
+        ...templateConfig
       };
       
-      const title = 'Your account is overdue';
+      const title = template;
       const html = compileTemplate(templatePath, templateData, title);
       
       const htmlFile = new Vinyl({
@@ -123,13 +189,17 @@ gulp.task('build', gulp.series('copy-images', function() {
     });
   });
   
-  return Promise.all(buildTasks);
+  return Promise.all(buildTasks).then(() => {
+    const indexHtml = generateIndex(templates);
+    fs.writeFileSync(path.join(__dirname, 'dist', 'index.html'), indexHtml);
+  });
 }));
 
 // Watch task
 gulp.task('watch', function() {
   gulp.watch('src/**/*.hbs', gulp.series('build'));
   gulp.watch('src/brands/**/*.json', gulp.series('build'));
+  gulp.watch('src/templates/configs/**/*.json', gulp.series('build'));
   gulp.watch('src/img/**/*', gulp.series('copy-images'));
 });
 
@@ -138,7 +208,7 @@ gulp.task('serve', gulp.series('build', function(done) {
   browserSync.init({
     server: {
       baseDir: './dist',
-      directory: true
+      index: 'index.html'
     },
     port: 3000,
     open: false,

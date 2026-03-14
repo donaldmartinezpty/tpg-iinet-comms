@@ -1,0 +1,12 @@
+{
+  "ORDER_NUMBER": "ORDER NUMBER",
+  "NAME": "NAME",
+  "PLAN": "PLAN",
+  "STATIC_IP_CALCULATION": "STATIC IP CALCULATION",
+  "CRITICAL_INFORMATION_SUMMARY_CIS": "Critical Information Summary (CIS)",
+  "KEY_FACT_SHEET": "Key Fact Sheet",
+  "TERMS_NAME": "TERMS NAME",
+  "SUPPORT_PAGE": "support page",
+  "SETUP_GUIDE": "setup guide",
+  "BYO_SETUP_GUIDE": "BYO setup guide"
+}

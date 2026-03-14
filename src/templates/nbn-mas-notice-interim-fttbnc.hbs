@@ -1,0 +1,68 @@
+{{> header title="Your nbn® service’s Maximum Attainable Upload Speed"}}
+
+<tr>
+  <td style="padding: 20px 15px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          <strong>Your nbn® service’s Maximum Attainable Upload Speed</strong>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          <p><strong>Hi %%NAME%%,</strong>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          We are writing to inform you that we have checked your nbn® connection and found that you cannot receive the maximum internet speeds for your pre-fibre Interim plan. As a result, we’ll apply a credit of $%%REFUND_AMOUNT%% to your account. The refund will be credited to your {{brand.displayName}} account unless you tell us otherwise.
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          You are currently paying for our %%PLAN%% plan which has maximum speeds of %%DOWNLOAD_MAX_SPEED%% Mbps download and %%UPLOAD_MAX_SPEED%% Mbps upload.
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          <strong>The maximum speeds you can actually receive are %%DOWNLOAD_ACTUAL_SPEED%% Mbps download and %%UPLOAD_ACTUAL_SPEED%% Mbps upload. </strong>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          <strong>Important things to note</strong>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          <p>Your maximum speed is a limit on what speeds you can receive, not a measurement of what you are actually receiving at all times. Actual speeds will vary based on several factors such as modem capabilities and internet traffic demand.  If you’re interested, <a href="%%READ_MORE%%" style="color: {{brand.colors.primary}}; text-decoration: underline;">read more</a> about what affects speed.
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          As your service is being upgraded to FTTP, no plan downgrade or cancellation option will be available to you in respect of your Interim plan. This maximum attainable line speed check only pertains to your pre-fibre Interim plan and will have no impact upon completion of the upgrade to Fibre.
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          If you have any questions, we can help. Just call us on {{brand.support.phone}}.
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+<tr>
+  <td style="padding: 20px 15px 60px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
+          Thanks,<br>
+          Your {{brand.displayName}} Team
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+{{> footer showThingsHeading=true showNbnTrademark=true}}

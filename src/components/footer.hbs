@@ -3,6 +3,21 @@
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
       <tr>
         <td style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 120%; color: {{brand.colors.footerText}};">
+          {{#if showThingsHeading}}
+          <p style="margin: 0 0 10px 0; font-size: 14px; font-weight: bold;">
+            Things you need to know
+          </p>
+          {{#if typicalEveningSpeed}}
+          <p style="margin: 0 0 15px 0;">
+            *Typical Evening Speed: This is the typical download speed you may experience between 7pm and 11pm. It is not a guaranteed minimum speed, and you may experience lower speeds during this period and at other times. Speed will vary on several factors such as technology type, plan choice and internet traffic demand.
+          </p>
+          {{/if}}
+          {{#if showNbnTrademark}}
+          <p style="margin: 0 0 15px 0;">
+            nbn&reg;, nbn co and other nbn&reg; logos and brands are trademarks of nbn co limited and used under licence.
+          </p>
+          {{/if}}
+          {{/if}}
           <p style="margin: 0 0 15px 0;">
             At {{brand.displayName}}, we want to ensure that your security information and personal details are safe. We will never call you and ask for your passwords, security codes, or credit card details. For more information, visit: <a href="{{brand.support.url}}" style="color: {{brand.colors.footerText}}; text-decoration: underline;">{{brand.support.url}}</a>
           </p>
