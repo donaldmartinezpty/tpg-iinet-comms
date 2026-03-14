@@ -3,9 +3,9 @@
   "NAME": "NAME",
   "PLAN": "PLAN",
   "TERMS_NAME": "TERMS NAME",
-  "DATE": "DATE",
-  "INSTALLATION_ADDRESS": "INSTALLATION ADDRESS",
   "CRITICAL_INFORMATION_SUMMARY_CIS": "Critical Information Summary (CIS)",
   "SETUP_GUIDE": "setup guide",
-  "BYO_SETUP_GUIDE": "BYO setup guide"
+  "BYO_SETUP_GUIDE": "BYO setup guide",
+  "DATE": "DATE",
+  "INSTALLATION_ADDRESS": "INSTALLATION ADDRESS"
 }
