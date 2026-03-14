@@ -1,0 +1,28 @@
+{
+  "name": "tpg-iinet-comms",
+  "version": "1.0.0",
+  "description": "Email template system for TPG and iiNet (comms) – baseline template",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "clean": "gulp clean",
+    "dev": "gulp serve"
+  },
+  "keywords": [
+    "email",
+    "templates",
+    "handlebars"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-inline-css": "^3.5.0",
+    "gulp-rename": "^2.0.0",
+    "handlebars": "^4.7.8",
+    "del": "^6.1.1",
+    "vinyl": "^2.2.1",
+    "browser-sync": "^2.29.3"
+  }
+}

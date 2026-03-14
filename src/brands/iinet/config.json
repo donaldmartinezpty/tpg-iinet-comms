@@ -1,0 +1,69 @@
+{
+  "name": "iiNet",
+  "displayName": "iiNet",
+  "colors": {
+    "primary": "#D21F2A",
+    "secondary": "#333333",
+    "headerText": "#000000",
+    "text": "#000000",
+    "background": "#FFFFFF",
+    "footerBackground": "#000000",
+    "footerText": "#FFFFFF",
+    "panelBackground": "#F5F5F5",
+    "accent": "#FF6600"
+  },
+  "features": [
+    {
+      "icon": "iinet-icon-1.png",
+      "title": "Welcoming to Fixed service",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "icon": "iinet-icon-2.png",
+      "title": "Your plan and service details",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "icon": "iinet-icon-3.png",
+      "title": "Technology type",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "icon": "iinet-icon-4.png",
+      "title": "Modem",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "icon": "iinet-icon-5.png",
+      "title": "Installation details",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "icon": "iinet-icon-6.png",
+      "title": "Technician appointment",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+  ],
+  "logo": {
+    "url": "img/iinet-logo.png",
+    "alt": "iiNet",
+    "width": "124",
+    "height": "47"
+  },
+  "support": {
+    "url": "https://support.tpg.com.au/security.information",
+    "phone": "1300 993 01",
+    "accountsPhone": "1300 650 405",
+    "accountsHoop": "ACCOUNTS HOOP"
+  },
+  "app": {
+    "name": "My iiNet app",
+    "appStoreUrl": "#",
+    "googlePlayUrl": "#"
+  },
+  "oneAppUrl": "https://my.iinet.com.au",
+  "company": {
+    "name": "iiNet Limited",
+    "acn": "068 628 937"
+  }
+}

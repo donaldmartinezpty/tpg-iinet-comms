@@ -1,0 +1,70 @@
+{
+  "name": "TPG",
+  "displayName": "TPG",
+  "colors": {
+    "primary": "#8725EE",
+    "headerText": "#8725EE",
+    "secondary": "#333333",
+    "text": "#000000",
+    "background": "#FFFFFF",
+    "footerBackground": "#300C55",
+    "footerText": "#FFFFFF",
+    "panelBackground": "#F5F5F5",
+    "accent": "#6A1B9A"
+  },
+  "features": [
+    {
+      "icon": "tpg-icon-1.png",
+      "title": "Welcoming to Fixed service",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "icon": "tpg-icon-2.png",
+      "title": "Your plan and service details",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "icon": "tpg-icon-3.png",
+      "title": "Technology type",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "icon": "tpg-icon-4.png",
+      "title": "Modem",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "icon": "tpg-icon-5.png",
+      "title": "Installation details",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "icon": "tpg-icon-6.png",
+      "title": "Technician appointment",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+  ],
+  "logo": {
+    "url": "img/tpg-logo.png",
+    "alt": "TPG",
+    "width": "125",
+    "height": "47"
+  },
+  "support": {
+    "url": "https://support.tpg.com.au/security.information",
+    "phone": "1300 993 01",
+    "accountsPhone": "1300 650 405",
+    "accountsHoop": "ACCOUNTS HOOP",
+    "financialHardship": "1527"
+  },
+  "app": {
+    "name": "My TPG app",
+    "appStoreUrl": "#",
+    "googlePlayUrl": "#"
+  },
+  "oneAppUrl": "https://my.tpg.com.au",
+  "company": {
+    "name": "TPG Telecom Limited",
+    "abn": "15 068 383 737"
+  }
+}
