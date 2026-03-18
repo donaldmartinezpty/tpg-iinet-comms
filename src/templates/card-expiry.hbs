@@ -1,0 +1,54 @@
+{{> header title=(concat "Please update your " brand.displayName " direct debit details")}}
+
+<tr>
+  <td style="padding: 20px 15px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 26px; color: {{brand.colors.headerText}}; padding-bottom: 8px;">
+          <strong>Please update your direct debit details</strong>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          Hi %%NAME%%,
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          Looks like your<strong> card for direct debit on account number %%ACCOUNTNO%% will expire at the end of this month. </strong>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          <strong>Once you get your new card, it’s easy to update your payment details in {{brand.app.name}}. </strong>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-bottom: 20px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+            <tr>
+              <td style="border-radius: 4px; background-color: {{brand.colors.primary}};">
+                <a href="{{brand.oneAppUrl}}" style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; color: #FFFFFF; text-decoration: none; padding: 14px 30px; display: inline-block;">{{brand.app.name}}</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+<tr>
+  <td style="padding: 20px 15px 60px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
+          Thanks,<br>
+          Your {{brand.displayName}} Team
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+{{> footer}}

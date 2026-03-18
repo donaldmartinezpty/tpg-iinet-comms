@@ -1,0 +1,54 @@
+{{> header title="Your payment arrangement"}}
+
+<tr>
+  <td style="padding: 20px 15px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          Hi %%NAME%%,
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          Thanks for getting in touch with us about your account. As agreed, your payment schedule is as follows:
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 26px; color: {{brand.colors.headerText}}; padding-bottom: 8px;">
+          <strong>Your payment arrangement:</strong>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          First payment: $%%FIRST_PAYMENT_AMOUNT%% due on %%FIRST_PAYMENT_DATE%%<br>
+          Total amount payable: $%%TOTAL_AMOUNT%%
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          <strong>Account number:</strong> %%ACCOUNT_NUMBER%%
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          If you have any questions, please call us on {{brand.support.phone}}.
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+<tr>
+  <td style="padding: 20px 15px 60px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
+          Thanks,<br>
+          Your {{brand.displayName}} Team
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+{{> footer}}

@@ -1,0 +1,60 @@
+{{> header title=(concat "Your " brand.displayName " order has been dispatched")}}
+
+<tr>
+  <td style="padding: 20px 15px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 26px; color: {{brand.colors.headerText}}; padding-bottom: 8px;">
+          <strong>We've shipped your order</strong>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          Hi %%NAME%%,
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          All of the items in your {{brand.displayName}} order have been shipped.
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          You can track your order number %%ORDER_NUMBER%% with tracking number <a href="%%TRACKING_URL%%" style="color: {{brand.colors.primary}}; text-decoration: underline;">%%TRACKING_NUMBER%%</a>.
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 26px; color: {{brand.colors.headerText}}; padding-bottom: 8px;">
+          <strong>Please note</strong>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          &#8226; Our delivery provider will deliver your order to your nominated delivery address and keep you updated on the status of your order.<br>
+          &#8226; You may be asked by the delivery provider to sign for the order and show your photo ID.<br>
+          &#8226; If your order can't be delivered, it will be taken to your local Australia Post office or the nearest collection point.
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
+          If you have any questions, just call us on {{brand.support.phone}} and we'll be happy to help.
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+<tr>
+  <td style="padding: 20px 15px 60px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
+          Thanks,<br>
+          Your {{brand.displayName}} Team
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+{{> footer}}

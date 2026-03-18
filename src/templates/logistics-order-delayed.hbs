@@ -1,0 +1,53 @@
+{{> header title=(concat "Your " brand.displayName " order is delayed")}}
+
+<tr>
+  <td style="padding: 20px 15px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 26px; color: {{brand.colors.headerText}}; padding-bottom: 8px;">
+          <strong>Sorry, your order is delayed</strong>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          Hi %%NAME%%,
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          It looks like your order is taking longer than expected due to unforeseen circumstances at our warehouse. We're sorry for any inconvenience and we're working to get your order shipped ASAP.
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          You can track your order number %%ORDER_NUMBER%% with tracking number <a href="%%TRACKING_URL%%" style="color: {{brand.colors.primary}}; text-decoration: underline;">%%TRACKING_NUMBER%%</a>.
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          Our delivery provider will deliver your order to your nominated delivery address and keep you updated on the status of your order. You may be asked by the delivery provider to sign for the order and show your photo ID.
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
+          If you have any questions, just call us on {{brand.support.phone}} and we'll be happy to help.
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+<tr>
+  <td style="padding: 20px 15px 60px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
+          Thanks,<br>
+          Your {{brand.displayName}} Team
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+{{> footer}}

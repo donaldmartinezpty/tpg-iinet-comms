@@ -1,0 +1,54 @@
+{{> header title=(concat brand.displayName " payment reminder")}}
+
+<tr>
+  <td style="padding: 20px 15px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 26px; color: {{brand.colors.headerText}}; padding-bottom: 8px;">
+          <strong>Your next payment is due soon</strong>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          Hi %%NAME%%,
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          A quick heads up that your next payment on account %%ACCOUNTNO%% will be due %%DUE_DATE%%. You can get an estimated bill amount and pay through {{brand.app.name}}
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          If you’d like to pay by automatic direct debit, it’s easy to update your payment details through {{brand.app.name}} If you’re sticking with manual payment, be sure to pay by the due date so there’s no interruption to your services.
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-bottom: 20px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+            <tr>
+              <td style="border-radius: 4px; background-color: {{brand.colors.primary}};">
+                <a href="{{brand.oneAppUrl}}" style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; color: #FFFFFF; text-decoration: none; padding: 14px 30px; display: inline-block;">{{brand.app.name}}</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+<tr>
+  <td style="padding: 20px 15px 60px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
+          Thanks,<br>
+          Your {{brand.displayName}} Team
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+{{> footer}}
