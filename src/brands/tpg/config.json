@@ -50,9 +50,14 @@
     "width": "125",
     "height": "47"
   },
+  "quoteIcons": {
+    "document": "img/tpg-icon-document.png",
+    "headset": "img/tpg-icon-headset.png",
+    "info": "img/tpg-icon-info.png"
+  },
   "support": {
-    "url": "https://support.tpg.com.au/security.information",
-    "phone": "1300 993 01",
+    "url": "https://support.tpg.com.au",
+    "phone": "13 14 23",
     "accountsPhone": "1300 650 405",
     "accountsHoop": "ACCOUNTS HOOP",
     "financialHardship": "1527"

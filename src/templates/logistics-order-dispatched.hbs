@@ -1,4 +1,4 @@
-{{> header title=(concat "Your " brand.displayName " order has been dispatched")}}
+{{> header}}
 
 <tr>
   <td style="padding: 20px 15px;">
@@ -10,7 +10,7 @@
       </tr>
       <tr>
         <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          Hi %%NAME%%,
+          <strong>Hi %%NAME%%,</strong>
         </td>
       </tr>
       <tr>
@@ -20,9 +20,10 @@
       </tr>
       <tr>
         <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          You can track your order number %%ORDER_NUMBER%% with tracking number <a href="%%TRACKING_URL%%" style="color: {{brand.colors.primary}}; text-decoration: underline;">%%TRACKING_NUMBER%%</a>.
+          You can track your order number %%ORDER_NUMBER%% at: <a href="%%TRACKING_URL%%" style="color: {{brand.colors.primary}}; text-decoration: underline;">%%TRACKING_URL%%</a>.
         </td>
       </tr>
+      {{> order-summary-address}}
       <tr>
         <td style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 26px; color: {{brand.colors.headerText}}; padding-bottom: 8px;">
           <strong>Please note</strong>
@@ -36,13 +37,16 @@
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};padding-bottom:20px;">
           If you have any questions, just call us on {{brand.support.phone}} and we'll be happy to help.
         </td>
       </tr>
+      {{> order-summary-sku-list}}
     </table>
   </td>
 </tr>
+
+
 
 <tr>
   <td style="padding: 20px 15px 60px;">

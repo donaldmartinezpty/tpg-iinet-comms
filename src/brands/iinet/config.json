@@ -50,9 +50,14 @@
     "width": "124",
     "height": "47"
   },
+  "quoteIcons": {
+    "document": "img/iinet-icon-document.png",
+    "headset": "img/iinet-icon-headset.png",
+    "info": "img/iinet-icon-info.png"
+  },
   "support": {
-    "url": "https://support.tpg.com.au/security.information",
-    "phone": "1300 993 01",
+    "url": "https://help.iinet.net.au",
+    "phone": "13 22 58",
     "accountsPhone": "1300 650 405",
     "accountsHoop": "ACCOUNTS HOOP"
   },

@@ -1,4 +1,4 @@
-{{> header title=(concat "Your " brand.displayName " order has been received")}}
+{{> header}}
 
 <tr>
   <td style="padding: 20px 15px;">
@@ -10,7 +10,7 @@
       </tr>
       <tr>
         <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          Hi %%NAME%%,
+          <strong>Hi %%NAME%%,</strong>
         </td>
       </tr>
       <tr>
@@ -23,13 +23,7 @@
           <strong>Your order details</strong>
         </td>
       </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          <strong>Order number:</strong> %%ORDER_NUMBER%%<br>
-          <strong>Tracking number:</strong> %%TRACKING_NUMBER%%<br>
-          <strong>Estimated delivery date:</strong> %%DATE%%
-        </td>
-      </tr>
+      {{> order-summary plainHeaders=true isLast=true}}
       <tr>
         <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           Our delivery provider will deliver your order to your nominated delivery address and keep you updated on the status of your order. You may be asked by the delivery provider to sign for the order and show your photo ID.
@@ -43,6 +37,8 @@
     </table>
   </td>
 </tr>
+
+
 
 <tr>
   <td style="padding: 20px 15px 60px;">

@@ -1,0 +1,22 @@
+<tr>
+  <td style="padding: 0 0px 20px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; {{#if plainHeaders}}font-size: 16px; line-height: 24px; color: {{brand.colors.text}}{{else}}font-size: 18px; line-height: 26px; color: {{brand.colors.headerText}}{{/if}}; padding-bottom: 8px;">
+          <strong>Order summary</strong>
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};{{#unless isLast}} padding-bottom: 20px;{{/unless}}">
+          <strong>Username:</strong> %%USERNAME%%<br>
+          <strong>Plan:</strong> %%PLAN%%<br>
+          <strong>Code:</strong> %%CODE%%<br>
+          <strong>Description:</strong> %%DESCRIPTION%%<br>
+          <strong>Qty Status:</strong> %%QTY_STATUS%%<br>
+          <strong>Estimated delivery date:</strong> %%ESTIMATED_DELIVERY_DATE%%
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>

@@ -29,12 +29,33 @@
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          <ul style="padding-left: 20px; margin: 0 0 20px 0;">
-            <li style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 8px;">&lt;DOCUMENT ICON&gt; If you are having problems opening this file, please download the latest version of Adobe Acrobat Reader.</li>
-            <li style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 8px;">&lt;HEADSET ICON&gt; Please don’t reply to this email as the mailbox is not monitored. If you have any questions about your quote, please call us on {{brand.support.phone}} and we’ll be happy to help.</li>
-            <li style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 8px;">&lt;BRAND LOGO&gt; You can find the terms and conditions for our products at: {{brand.termsUrl}}</li>
-          </ul>
+        <td style="padding-bottom: 20px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td width="56" valign="top" style="padding: 0 16px 16px 0;">
+                <img src="{{brand.quoteIcons.document}}" alt="" width="40" height="40" style="display: block;">
+              </td>
+              <td valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 16px;">
+                If you are having problems opening this file, please download the latest version of Adobe Acrobat Reader.
+              </td>
+            </tr>
+            <tr>
+              <td width="56" valign="top" style="padding: 0 16px 16px 0;">
+                <img src="{{brand.quoteIcons.headset}}" alt="" width="40" height="40" style="display: block;">
+              </td>
+              <td valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 16px;">
+                Please don’t reply to this email as the mailbox is not monitored. If you have any questions about your quote, please call us on {{brand.support.phone}} and we’ll be happy to help.
+              </td>
+            </tr>
+            <tr>
+              <td width="56" valign="top" style="padding: 0 16px 0 0;">
+                <img src="{{brand.quoteIcons.info}}" alt="" width="40" height="40" style="display: block;">
+              </td>
+              <td valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
+                You can find the terms and conditions for our products at: {{brand.termsUrl}}
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
     </table>

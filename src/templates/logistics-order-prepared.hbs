@@ -1,4 +1,4 @@
-{{> header title=(concat "Your " brand.displayName " order is being prepared")}}
+{{> header}}
 
 <tr>
   <td style="padding: 20px 15px;">
@@ -10,7 +10,7 @@
       </tr>
       <tr>
         <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          Hi %%NAME%%,
+          <strong>Hi %%NAME%%,</strong>
         </td>
       </tr>
       <tr>
@@ -20,7 +20,7 @@
       </tr>
       <tr>
         <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          You can track your order number %%ORDER_NUMBER%% with tracking number <a href="%%TRACKING_URL%%" style="color: {{brand.colors.primary}}; text-decoration: underline;">%%TRACKING_NUMBER%%</a>.
+          You can track your order number %%ORDER_NUMBER%% at: <a href="%%TRACKING_URL%%" style="color: {{brand.colors.primary}}; text-decoration: underline;">%%TRACKING_URL%%</a>.
         </td>
       </tr>
       <tr>
@@ -35,6 +35,7 @@
           &#8226; If your order can't be delivered, it will be taken to your local Australia Post office or the nearest collection point.
         </td>
       </tr>
+      {{> order-summary-sku-list isLast=true}}
       <tr>
         <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
           If you have any questions, just call us on {{brand.support.phone}} and we'll be happy to help.
@@ -43,6 +44,8 @@
     </table>
   </td>
 </tr>
+
+
 
 <tr>
   <td style="padding: 20px 15px 60px;">
