@@ -1,6 +1,9 @@
 {
   "name": "TPG",
   "displayName": "TPG",
+  "layout": {
+    "horizontalPadding": "40px"
+  },
   "colors": {
     "primary": "#8725EE",
     "headerText": "#8725EE",

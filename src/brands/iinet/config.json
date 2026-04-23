@@ -1,6 +1,9 @@
 {
   "name": "iiNet",
   "displayName": "iiNet",
+  "layout": {
+    "horizontalPadding": "15px"
+  },
   "colors": {
     "primary": "#D21F2A",
     "secondary": "#333333",
