@@ -3,7 +3,7 @@
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
       <tr>
         <td align="right" class="mobile-center" style="padding-bottom: 20px;">
-          <img src="{{brand.logo.url}}" alt="{{brand.logo.alt}}" width="{{brand.logo.width}}" height="{{brand.logo.height}}" style="display: block; max-width: 100%; height: auto;">
+          <img src="{{brand.logo.url}}" alt="{{brand.logo.alt}}" title="{{#if brand.logo.title}}{{brand.logo.title}}{{else}}{{brand.logo.alt}}{{/if}}" width="{{brand.logo.width}}" height="{{brand.logo.height}}" style="display: block; max-width: 100%; height: auto;">
         </td>
       </tr>
       {{#if title}}
