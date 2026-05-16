@@ -1,0 +1,136 @@
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+  style="width: 100%; max-width: 100%; table-layout: fixed; background-color: {{brand.colors.panelBackground}}; border-radius: 8px;">
+  <tr>
+    <td style="font-family: Arial, Helvetica, sans-serif; padding: 25px; word-wrap: break-word; overflow-wrap: break-word;">
+      {{#if accountNumber}}
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+          <td style="font-size: 14px; color: {{brand.colors.text}}; padding-bottom: 5px;">
+            <strong>Account number</strong>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 18px; font-weight: normal; color: {{brand.colors.text}};">
+            {{accountNumber}}
+          </td>
+        </tr>
+      </table>
+      {{> keyline-table color="#ffffff"}}
+      {{/if}}
+
+      {{#if invoiceNumber}}
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+          <td style="font-size: 14px; color: {{brand.colors.text}}; padding-bottom: 5px;">
+            <strong>Invoice number</strong>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 18px; font-weight: normal; color: {{brand.colors.text}};">
+            {{invoiceNumber}}
+          </td>
+        </tr>
+      </table>
+      {{> keyline-table color="#ffffff"}}
+      {{/if}}
+
+      {{#if totalBalance}}
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+          <td style="font-size: 14px; color: {{brand.colors.primary}}; padding-bottom: 5px;">
+            <strong>{{#if balanceHeading}}{{balanceHeading}}{{else}}Total balance due{{/if}}</strong>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 24px; font-weight: normal; color: {{brand.colors.primary}};">
+            {{totalBalance}}
+          </td>
+        </tr>
+      </table>
+      {{#unless paymentStatus}}
+      {{> keyline-table color="#ffffff"}}
+      {{/unless}}
+      {{/if}}
+
+      {{#if directDebitDate}}
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+          <td style="font-size: 14px; color: {{brand.colors.text}}; padding-bottom: 5px;">
+            <strong>Direct debit date</strong>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 18px; font-weight: normal; color: {{brand.colors.text}};">
+            {{directDebitDate}}
+          </td>
+        </tr>
+      </table>
+      {{> keyline-table color="#ffffff"}}
+      {{/if}}
+
+      {{#if paymentDueDate}}
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+          <td style="font-size: 14px; color: {{brand.colors.text}}; padding-bottom: 5px;">
+            <strong>Payment due date</strong>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 18px; font-weight: normal; color: {{brand.colors.text}};">
+            {{paymentDueDate}}
+          </td>
+        </tr>
+      </table>
+      {{> keyline-table color="#ffffff"}}
+      {{/if}}
+
+      {{#if paymentStatus}}
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-top:20px;">
+        <tr>
+          <td style="font-size: 16px; font-weight: bold; color: {{brand.colors.text}};">
+            {{paymentStatus}}
+          </td>
+        </tr>
+      </table>
+      {{/if}}
+
+      {{#if downloadButton}}
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0;">
+        <tr>
+          <td align="left">
+            {{> button url=downloadButton.url text=downloadButton.text color=brand.colors.primary}}
+          </td>
+        </tr>
+      </table>
+      {{/if}}
+      {{#if downloadUrl}}
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0;">
+        <tr>
+          <td align="left">
+            {{> button url=downloadUrl text=downloadText color=brand.colors.primary}}
+          </td>
+        </tr>
+      </table>
+      {{/if}}
+
+      {{#if secondaryButton}}
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0;">
+        <tr>
+          <td align="left">
+            {{> button url=secondaryButton.url text=secondaryButton.text color=brand.colors.primary}}
+          </td>
+        </tr>
+      </table>
+      {{/if}}
+      {{#if secondaryUrl}}
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0;">
+        <tr>
+          <td align="left">
+            {{> button url=secondaryUrl text=secondaryText color=brand.colors.primary}}
+          </td>
+        </tr>
+      </table>
+      {{/if}}
+    </td>
+  </tr>
+</table>

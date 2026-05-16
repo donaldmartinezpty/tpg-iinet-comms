@@ -1,0 +1,42 @@
+{{#if showSection}}
+<tr>
+  <td style="padding: 10px {{brand.layout.horizontalPadding}} 30px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td class="mobile-full-width" style="vertical-align: top; padding-right: 20px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: {{brand.colors.text}}; padding-bottom: 10px;">
+                Download {{brand.app.name}}
+              </td>
+            </tr>
+            {{#if description}}
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 120%; color: {{brand.colors.text}};">
+                {{description}}
+              </td>
+            </tr>
+            {{/if}}
+          </table>
+        </td>
+        <td class="mobile-full-width" style="vertical-align: top; width: 228px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td align="left" class="mobile-full-width" style="padding-right: 5px; padding-bottom: 10px;">
+                <a href="{{brand.app.appStoreUrl}}" style="display: inline-block;">
+                  <img src="img/apple-store.png" alt="Download on the App Store" width="103" height="29" style="display: block; max-width: 100%; height: auto;">
+                </a>
+              </td>
+              <td align="left" class="mobile-full-width" style="padding-left: 5px; padding-bottom: 10px;">
+                <a href="{{brand.app.googlePlayUrl}}" style="display: inline-block;">
+                  <img src="img/google-play.png" alt="Get it on Google Play" width="103" height="29" style="display: block; max-width: 100%; height: auto;">
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+{{/if}}

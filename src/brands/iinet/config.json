@@ -2,7 +2,13 @@
   "name": "iiNet",
   "displayName": "iiNet",
   "layout": {
-    "horizontalPadding": "15px"
+    "horizontalPadding": "15px",
+    "twoColumn": {
+      "tableWidth": 570,
+      "leftWidth": 313,
+      "rightWidth": 257,
+      "gutter": 15
+    }
   },
   "colors": {
     "primary": "#D21F2A",

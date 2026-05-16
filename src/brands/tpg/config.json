@@ -2,7 +2,13 @@
   "name": "TPG",
   "displayName": "TPG",
   "layout": {
-    "horizontalPadding": "40px"
+    "horizontalPadding": "40px",
+    "twoColumn": {
+      "tableWidth": 520,
+      "leftWidth": 286,
+      "rightWidth": 234,
+      "gutter": 15
+    }
   },
   "colors": {
     "primary": "#8725EE",

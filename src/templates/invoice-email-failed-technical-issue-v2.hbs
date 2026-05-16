@@ -1,0 +1,50 @@
+{{> header title="You can get your invoice online"}}
+
+<tr>
+  <td style="padding: 0 {{brand.layout.horizontalPadding}};">
+    <table role="presentation" class="two-column-table" cellspacing="0" cellpadding="0" border="0" width="{{brand.layout.twoColumn.tableWidth}}" style="width: {{brand.layout.twoColumn.tableWidth}}px; max-width: 100%; table-layout: fixed;">
+      <tr>
+        <td class="two-column two-column-left" width="{{brand.layout.twoColumn.leftWidth}}" valign="top" style="width: {{brand.layout.twoColumn.leftWidth}}px; max-width: {{brand.layout.twoColumn.leftWidth}}px; vertical-align: top; padding-right: {{brand.layout.twoColumn.gutter}}px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+                Hi %%NAME%%,
+              </td>
+            </tr>
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+                Sorry, due to a technical issue, we won't be able to email your bill this month.
+              </td>
+            </tr>
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+                You can check your bill in <a href="{{brand.oneAppUrl}}" style="color: {{brand.colors.primary}}; text-decoration: underline;">{{brand.app.name}}</a>.
+              </td>
+            </tr>
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 5px;">
+                Thanks,<br>
+                Your {{brand.displayName}} Team
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td class="two-column two-column-right" width="{{brand.layout.twoColumn.rightWidth}}" valign="top" style="width: {{brand.layout.twoColumn.rightWidth}}px; max-width: {{brand.layout.twoColumn.rightWidth}}px; vertical-align: top; padding-left: {{brand.layout.twoColumn.gutter}}px;">
+          {{> invoice-panel
+            totalBalance='$%%AMOUNT_OWING%%'
+            paymentDueDate='%%DATE%%'
+          }}
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+{{> keyline color="#eeeeee" padding=(concat "20px " brand.layout.horizontalPadding)}}
+
+{{> app-download
+  showSection=true
+  description=(concat "Stay in control of your account the easy way. Pay bills, update your details, and manage everything on the go.")
+}}
+
+{{> footer}}

@@ -1,0 +1,69 @@
+{{> header title=(concat "Your " brand.displayName " invoice")}}
+
+<tr>
+  <td style="padding: 0 {{brand.layout.horizontalPadding}};">
+    <table role="presentation" class="two-column-table" cellspacing="0" cellpadding="0" border="0" width="{{brand.layout.twoColumn.tableWidth}}" style="width: {{brand.layout.twoColumn.tableWidth}}px; max-width: 100%; table-layout: fixed;">
+      <tr>
+        <td class="two-column two-column-left" width="{{brand.layout.twoColumn.leftWidth}}" valign="top" style="width: {{brand.layout.twoColumn.leftWidth}}px; max-width: {{brand.layout.twoColumn.leftWidth}}px; vertical-align: top; padding-right: {{brand.layout.twoColumn.gutter}}px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+                Hi %%NAME%%,
+              </td>
+            </tr>
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+                You can view your latest {{brand.displayName}} invoice through <a href="{{brand.oneAppUrl}}" style="color: {{brand.colors.primary}}; text-decoration: underline;">{{brand.app.name}}</a>.
+              </td>
+            </tr>
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+                Good news - your account is in credit, so you don't owe us anything this month.
+              </td>
+            </tr>
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+                If you need to update your details, you can do it through <a href="{{brand.oneAppUrl}}" style="color: {{brand.colors.primary}}; text-decoration: underline;">{{brand.app.name}}</a>.
+              </td>
+            </tr>
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+                For more information about your bill, check out our %%INVOICE_GUIDE%%.
+              </td>
+            </tr>
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 5px;">
+                Thanks,<br>
+                Your {{brand.displayName}} Team
+              </td>
+            </tr>
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 18px; color: #999999; padding-top: 20px;">
+                To view your bill, you may need to download <a href="https://www.adobe.com/au/products/reader.html" style="color: #999999; text-decoration: underline;" target="_blank">Adobe Reader</a>.
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td class="two-column two-column-right" width="{{brand.layout.twoColumn.rightWidth}}" valign="top" style="width: {{brand.layout.twoColumn.rightWidth}}px; max-width: {{brand.layout.twoColumn.rightWidth}}px; vertical-align: top; padding-left: {{brand.layout.twoColumn.gutter}}px;">
+          {{> invoice-panel
+            accountNumber='%%ACCOUNT_NUMBER%%'
+            invoiceNumber='%%INVOICE_NUMBER%%'
+            totalBalance='%%AMOUNT_OWING%%'
+            balanceHeading='Account balance'
+            downloadUrl='%%DOWNLOAD_BILL%%'
+            downloadText='Download bill'
+          }}
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+{{> keyline color="#eeeeee" padding=(concat "20px " brand.layout.horizontalPadding)}}
+
+{{> app-download
+  showSection=true
+  description=(concat "Stay in control of your account the easy way. Pay bills, update your details, and manage everything on the go.")
+}}
+
+{{> footer}}

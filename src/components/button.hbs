@@ -1,0 +1,21 @@
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 0;">
+  <tr>
+    <td align="center" style="padding: {{#if padding}}{{padding}}{{else}}15px 0{{/if}};">
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td align="center" style="background-color: {{#if color}}{{color}}{{else}}{{brand.colors.primary}}{{/if}}; border-radius: 4px;">
+            <a href="{{url}}" style="display: inline-block; padding: 12px 24px; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; color: #FFFFFF; text-decoration: none; border-radius: 4px; max-width: 100%; box-sizing: border-box;">
+              {{text}}
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--[if mso]>
+<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{url}}" style="height:40px;v-text-anchor:middle;width:150px;" arcsize="10%" stroke="f" fillcolor="{{#if color}}{{color}}{{else}}{{brand.colors.primary}}{{/if}}">
+<w:anchorlock/>
+<center style="color:#FFFFFF;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;">{{text}}</center>
+</v:roundrect>
+<![endif]-->
