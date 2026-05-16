@@ -8,7 +8,8 @@
     "watch": "gulp watch",
     "clean": "gulp clean",
     "dev": "gulp serve",
-    "peek-docx": "node scripts/peek-docx.js"
+    "peek-docx": "node scripts/peek-docx.js",
+    "extract-collections-suite": "node scripts/extract-collections-suite.js"
   },
   "keywords": [
     "email",

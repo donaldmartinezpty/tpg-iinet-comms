@@ -188,15 +188,32 @@ function copySourceDocs() {
   return Object.keys(fileMap);
 }
 
+function loadCollectionsSuiteSourceMap() {
+  const manifestPath = path.join(__dirname, 'src', 'templates', 'collections-suite-manifest.json');
+  if (!fs.existsSync(manifestPath)) {
+    throw new Error(
+      'Missing collections-suite-manifest.json. Run: npm run extract-collections-suite'
+    );
+  }
+  const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+  const sourceFile = manifest.sourceFile || 'Collections_Notice_Suite v1.4.docx';
+  const map = {};
+  for (const slug of manifest.slugs || []) {
+    map[slug] = sourceFile;
+  }
+  return map;
+}
+
 function buildSourceDocMap(copiedFiles) {
+  let collectionsSuiteMap = {};
+  try {
+    collectionsSuiteMap = loadCollectionsSuiteSourceMap();
+  } catch (err) {
+    console.warn(err.message);
+  }
+
   const SPECIAL = {
-    'collections-demand-notice': 'Collections_Notice_Suite v1.2.docx',
-    'collections-dishonoured-arrangement': 'Collections_Notice_Suite v1.2.docx',
-    'collections-financial-hardship': 'Collections_Notice_Suite v1.2.docx',
-    'collections-overdue': 'Collections_Notice_Suite v1.2.docx',
-    'collections-payment-arrangement': 'Collections_Notice_Suite v1.2.docx',
-    'collections-pending-disconnection': 'Collections_Notice_Suite v1.2.docx',
-    'collections-pending-suspension': 'Collections_Notice_Suite v1.2.docx',
+    ...collectionsSuiteMap,
     'ucm-case-closed': 'TPM - UCM Comms - Case Closed - Email.docx',
     'ucm-case-opened': 'TPM - UCM Comms - Case Opened - Email.docx',
     'ucm-case-reopened': 'TPM - UCM Comms - Case Reopened - Email.docx',

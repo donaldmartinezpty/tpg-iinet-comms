@@ -1,0 +1,192 @@
+{
+  "sourceFile": "Collections_Notice_Suite v1.4.docx",
+  "extractedFrom": "Collections_Notice_Suite v1.4.docx",
+  "slugs": [
+    "collections-demand-notice-1-pending-restriction-obar-obar",
+    "collections-demand-notice-2-pending-suspension-full-bar-fullbar",
+    "collections-demand-notice-3-pending-disconnection-credit-checked-fdl1",
+    "collections-demand-notice-3-pending-disconnection-non-credit-checked-fdlnc",
+    "collections-demand-notice-4-post-disconnection-credit-checked-without-default-sent-w-dxdem1",
+    "collections-demand-notice-4-post-disconnection-credit-checked-with-default-warning-s-cdwn1-pdr3",
+    "collections-demand-notice-4-post-disconnection-non-credit-checked-sent-within-1-busi-pdxn",
+    "collections-demand-notice-5-credit-default-notice-demand2",
+    "collections-demand-notice-6-credit-default-notice-21d-dwl1",
+    "collections-financial-hardship-enquiry-followup-fhescprf",
+    "collections-financial-hardship-enquiry-no-contact-fhntc",
+    "collections-financial-hardship-enquiry-reminder-fhescpr",
+    "collections-financial-hardship-payment-arrangement-broken-sent-within-1-business-day-fhba",
+    "collections-financial-hardship-payment-arrangement-confirmed-scheduled-fharrs",
+    "collections-financial-hardship-payment-arrangement-confirmed-variable-fharrv",
+    "collections-financial-hardship-payment-arrangement-overdue-fhod",
+    "collections-overdue-reminder-stay-connected-a-customer-can-enter-the-stay-connected-rem",
+    "collections-overdue-reminder-voluntary-disconnection-vt01",
+    "collections-overdue-reminder-voluntary-port-out-noservice",
+    "collections-payment-arrangement-broken-sent-within-1-business-day-when-a-payment-arr-brokenarr",
+    "collections-payment-arrangement-confirmed-scheduled-arrs",
+    "collections-payment-arrangement-confirmed-variable-arrv",
+    "collections-payment-arrangement-dishonoured-sent-within-1-business-day-when-a-paymen-dpa1"
+  ],
+  "blocks": [
+    {
+      "slug": "collections-demand-notice-1-pending-restriction-obar-obar",
+      "refCode": "TPG_OBAR IINET_OBAR",
+      "subject": "Your bill is overdue",
+      "rowDescription": "Demand Notice 1 - Pending Restriction (OBAR)",
+      "blockIndex": 1
+    },
+    {
+      "slug": "collections-demand-notice-2-pending-suspension-full-bar-fullbar",
+      "refCode": "FULLBAR",
+      "subject": "Notice of Pending Suspension",
+      "rowDescription": "Demand Notice 2 - Pending Suspension (Full Bar)",
+      "blockIndex": 2
+    },
+    {
+      "slug": "collections-demand-notice-3-pending-disconnection-credit-checked-fdl1",
+      "refCode": "TPG_FDL1 IINET_FDL1",
+      "subject": "Notice of Pending Disconnection",
+      "rowDescription": "Demand Notice 3 - Pending Disconnection (Credit Checked)",
+      "blockIndex": 3
+    },
+    {
+      "slug": "collections-demand-notice-3-pending-disconnection-non-credit-checked-fdlnc",
+      "refCode": "TPG_FDLNC IINET_FDLNC",
+      "subject": "Notice of Pending Disconnection",
+      "rowDescription": "Demand Notice 3 - Pending Disconnection (Non-Credit checked)",
+      "blockIndex": 4
+    },
+    {
+      "slug": "collections-demand-notice-4-post-disconnection-credit-checked-without-default-sent-w-dxdem1",
+      "refCode": "TPG_ DXDEM1 IINET_ DXDEM1",
+      "subject": "Important information about your account",
+      "rowDescription": "Demand Notice 4 - Post-Disconnection (Credit checked without default) Sent within 1 business day when the final invoice is overdue for an amount of $50 to $300. By this point, the account may be up to 45 days overdue.",
+      "blockIndex": 5
+    },
+    {
+      "slug": "collections-demand-notice-4-post-disconnection-credit-checked-with-default-warning-s-cdwn1-pdr3",
+      "refCode": "TPG_CDWN1 TPG_PDR3 IINET_CDWN1 IINET_PDR3",
+      "subject": "Credit Default Warning Notice",
+      "rowDescription": "Demand Notice 4 - Post-Disconnection (Credit checked with default warning) Sent within 1 business day when the final invoice is overdue for an amount &gt;$300. Only sent to credit-checked customers. There are 2 templates for this function with identical content – the PDR3 version is sent on a different route following a broken payment arrangement or a delay.",
+      "blockIndex": 6
+    },
+    {
+      "slug": "collections-demand-notice-4-post-disconnection-non-credit-checked-sent-within-1-busi-pdxn",
+      "refCode": "TPG_PDXN IINET_PDXN",
+      "subject": "Important information about your account",
+      "rowDescription": "Demand Notice 4 - Post-Disconnection (Non-Credit checked) Sent within 1 business day when the final invoice is overdue. There is no credit default action on a customer who wasn’t credit checked.",
+      "blockIndex": 7
+    },
+    {
+      "slug": "collections-demand-notice-5-credit-default-notice-demand2",
+      "refCode": "TPG_DEMAND2 IINET_DEMAND2",
+      "subject": "Important: Default Notice",
+      "rowDescription": "Demand Notice 5 - Credit Default Notice - 6Q",
+      "blockIndex": 8
+    },
+    {
+      "slug": "collections-demand-notice-6-credit-default-notice-21d-dwl1",
+      "refCode": "TPG_DWL1 IINET_DWL1",
+      "subject": "Important: Default Notice",
+      "rowDescription": "Demand Notice 6 -Credit Default Notice - 21D",
+      "blockIndex": 9
+    },
+    {
+      "slug": "collections-financial-hardship-enquiry-followup-fhescprf",
+      "refCode": "TPG_FHESCPRF IINET_FHESCPRF",
+      "subject": "Follow-up for your Financial Hardship enquiry",
+      "rowDescription": "Financial Hardship Enquiry - Followup",
+      "blockIndex": 10
+    },
+    {
+      "slug": "collections-financial-hardship-enquiry-no-contact-fhntc",
+      "refCode": "TPG_FHNTC IINET_FHNTC",
+      "subject": "Contact us about your Financial Hardship enquiry",
+      "rowDescription": "Financial Hardship Enquiry - No Contact",
+      "blockIndex": 11
+    },
+    {
+      "slug": "collections-financial-hardship-enquiry-reminder-fhescpr",
+      "refCode": "TPG_FHESCPR IINET_FHESCPR",
+      "subject": "Your Financial Hardship enquiry",
+      "rowDescription": "Financial Hardship Enquiry - Reminder",
+      "blockIndex": 12
+    },
+    {
+      "slug": "collections-financial-hardship-payment-arrangement-broken-sent-within-1-business-day-fhba",
+      "refCode": "TPG_FHBA IINET_FHBA",
+      "subject": "Your Financial Hardship payment arrangement",
+      "rowDescription": "Financial Hardship Payment Arrangement Broken Sent within 1 business day a Financial Hardship payment arrangement is broken.",
+      "blockIndex": 13
+    },
+    {
+      "slug": "collections-financial-hardship-payment-arrangement-confirmed-scheduled-fharrs",
+      "refCode": "TPG_FHARRS IINET_FHARRS",
+      "subject": "Your Financial Hardship payment arrangement",
+      "rowDescription": "Financial Hardship Payment Arrangement confirmed - Scheduled",
+      "blockIndex": 14
+    },
+    {
+      "slug": "collections-financial-hardship-payment-arrangement-confirmed-variable-fharrv",
+      "refCode": "TPG_FHARRV IINET_FHARRV",
+      "subject": "Your Financial Hardship payment arrangement",
+      "rowDescription": "Financial Hardship Payment Arrangement confirmed - Variable",
+      "blockIndex": 15
+    },
+    {
+      "slug": "collections-financial-hardship-payment-arrangement-overdue-fhod",
+      "refCode": "TPG_FHOD IINET_FHOD",
+      "subject": "Your Financial Hardship payment arrangement",
+      "rowDescription": "Financial Hardship Payment Arrangement Overdue",
+      "blockIndex": 16
+    },
+    {
+      "slug": "collections-overdue-reminder-stay-connected-a-customer-can-enter-the-stay-connected-rem",
+      "refCode": "TPG_REM IINET_REM",
+      "subject": "Your bill is overdue",
+      "rowDescription": "Overdue reminder - Stay Connected A customer can enter the Stay Connected route at any time, typically when identified as part of a post code impacted by a natural disaster. No suspension, disconnection or debt management occurs while on the Stay Connected route. It functions as a temporary hold. When customer exits Stay Connected state, they will restart the collections flow and start getting OBAR notice etc. with correct notice advice for suspension/disconnection etc. The email is sent to remind about the overdue amount.",
+      "blockIndex": 17
+    },
+    {
+      "slug": "collections-overdue-reminder-voluntary-disconnection-vt01",
+      "refCode": "TPG_VT01 IINET_VT01",
+      "subject": "Your account is overdue",
+      "rowDescription": "Overdue reminder - Voluntary Disconnection",
+      "blockIndex": 18
+    },
+    {
+      "slug": "collections-overdue-reminder-voluntary-port-out-noservice",
+      "refCode": "TPG_NOSERVICE IINET_NOSERVICE",
+      "subject": "Your account is overdue",
+      "rowDescription": "Overdue reminder - Voluntary Port Out",
+      "blockIndex": 19
+    },
+    {
+      "slug": "collections-payment-arrangement-broken-sent-within-1-business-day-when-a-payment-arr-brokenarr",
+      "refCode": "TPG_BROKENARR IINET_BROKENARR",
+      "subject": "Dishonoured payment arrangement",
+      "rowDescription": "Payment Arrangement Broken Sent within 1 business day when a payment arrangement has been broken.",
+      "blockIndex": 20
+    },
+    {
+      "slug": "collections-payment-arrangement-confirmed-scheduled-arrs",
+      "refCode": "TPG_ARRS IINET_ARRS",
+      "subject": "Payment arrangement confirmation",
+      "rowDescription": "Payment Arrangement confirmed - Scheduled",
+      "blockIndex": 21
+    },
+    {
+      "slug": "collections-payment-arrangement-confirmed-variable-arrv",
+      "refCode": "TPG_ARRV IINET_ARRV",
+      "subject": "Payment arrangement confirmation",
+      "rowDescription": "Payment Arrangement confirmed - Variable",
+      "blockIndex": 22
+    },
+    {
+      "slug": "collections-payment-arrangement-dishonoured-sent-within-1-business-day-when-a-paymen-dpa1",
+      "refCode": "TPG_DPA1 IINET_DPA1",
+      "subject": "Dishonoured payment arrangement",
+      "rowDescription": "Payment Arrangement Dishonoured Sent within 1 business day when a payment arrangement has been dishonoured.",
+      "blockIndex": 23
+    }
+  ]
+}

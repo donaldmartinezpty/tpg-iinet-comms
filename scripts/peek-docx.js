@@ -11,6 +11,10 @@
 const mammoth = require('mammoth');
 const fs = require('fs');
 const path = require('path');
+const {
+  stripTags,
+  extractFromSubjectNoticeChunks,
+} = require('./lib/docx-suite-blocks');
 
 const DEFAULT_REL = path.join(
   'src',
@@ -20,16 +24,21 @@ const DEFAULT_REL = path.join(
   'Collections_Notice_Suite v1.2.docx'
 );
 
-/** Collections emails built in-repo (see gulpfile.js buildSourceDocMap SPECIAL). */
-const REPO_COLLECTIONS_SLUGS = [
-  'collections-demand-notice',
-  'collections-dishonoured-arrangement',
-  'collections-financial-hardship',
-  'collections-overdue',
-  'collections-payment-arrangement',
-  'collections-pending-disconnection',
-  'collections-pending-suspension',
-];
+const MANIFEST_PATH = path.join(__dirname, '..', 'src', 'templates', 'collections-suite-manifest.json');
+
+function loadRepoCollectionsSlugs() {
+  if (fs.existsSync(MANIFEST_PATH)) {
+    const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
+    if (Array.isArray(manifest.slugs) && manifest.slugs.length) return manifest.slugs;
+  }
+  const templatesDir = path.join(__dirname, '..', 'src', 'templates');
+  if (!fs.existsSync(templatesDir)) return [];
+  return fs
+    .readdirSync(templatesDir)
+    .filter((f) => f.startsWith('collections-') && f.endsWith('.hbs'))
+    .map((f) => f.replace(/\.hbs$/, ''))
+    .sort();
+}
 
 function parseArgs(argv) {
   let json = false;
@@ -41,10 +50,6 @@ function parseArgs(argv) {
     else if (!a.startsWith('-')) positional.push(a);
   }
   return { json, textOnly, filePath: positional[0] || null };
-}
-
-function stripTags(html) {
-  return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
 function extractHeadings(html) {
@@ -104,52 +109,14 @@ function countFormatRows(html) {
   return m ? m.length : 0;
 }
 
-/**
- * Collections_Notice_Suite-style layout: each notice lives in a table row; the "Copy"
- * column starts with <p><strong>From:</strong> … (not the single-doc "Email copy" h3).
- */
-function getRowCellsForFromBlock(html, fromIdx) {
-  const trStart = html.lastIndexOf('<tr', fromIdx);
-  if (trStart === -1 || trStart > fromIdx) return { description: '', refCode: '' };
-  const trEnd = html.indexOf('</tr>', fromIdx);
-  if (trEnd === -1) return { description: '', refCode: '' };
-  const row = html.slice(trStart, trEnd + 5);
-  const cells = [];
-  const tdRe = /<td[^>]*>([\s\S]*?)<\/td>/gi;
-  let m;
-  while ((m = tdRe.exec(row)) !== null) {
-    cells.push(stripTags(m[1]).replace(/\s+/g, ' ').trim());
-  }
-  return {
-    description: cells[0] || '',
-    refCode: cells[1] || '',
-  };
-}
-
 function extractFromSubjectNoticeBlocks(html) {
-  const needle = '<p><strong>From:</strong>';
-  const indices = [];
-  let pos = 0;
-  let idx;
-  while ((idx = html.indexOf(needle, pos)) !== -1) {
-    indices.push(idx);
-    pos = idx + needle.length;
-  }
-
-  return indices.map((fromIdx, i) => {
-    const end = i + 1 < indices.length ? indices[i + 1] : html.length;
-    const chunk = html.slice(fromIdx, end);
-    const subj = chunk.match(/<strong>Subject:\s*<\/strong>\s*([^<]+)/i);
-    const h3match = chunk.match(/<h3[^>]*>([\s\S]*?)<\/h3>/i);
-    const { description, refCode } = getRowCellsForFromBlock(html, fromIdx);
-    return {
-      blockIndex: i + 1,
-      tableDescription: description.slice(0, 800),
-      refCode: refCode.slice(0, 300),
-      subject: subj ? subj[1].trim() : '',
-      noticeHeading: h3match ? stripTags(h3match[1]).trim() : '',
-    };
-  });
+  return extractFromSubjectNoticeChunks(html).map((b) => ({
+    blockIndex: b.blockIndex,
+    tableDescription: b.tableDescription.slice(0, 800),
+    refCode: b.refCode.slice(0, 300),
+    subject: b.subject,
+    noticeHeading: b.noticeHeading,
+  }));
 }
 
 function subjectHistogram(blocks) {
@@ -204,6 +171,7 @@ async function main() {
   const formatMentions = countFormatRows(html);
   const fromSubjectBlocks = extractFromSubjectNoticeBlocks(html);
   const subjectCounts = subjectHistogram(fromSubjectBlocks);
+  const REPO_COLLECTIONS_SLUGS = loadRepoCollectionsSlugs();
 
   const report = {
     file: resolved,
