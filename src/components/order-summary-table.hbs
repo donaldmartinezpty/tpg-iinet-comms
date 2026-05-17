@@ -1,0 +1,44 @@
+<tr>
+  <td style="padding: 0 0px;{{#unless isLast}} padding-bottom: 20px;{{/unless}}">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="width: 100%; background-color: {{brand.colors.panelBackground}}; border-radius: 8px;">
+      <tr>
+        <td style="padding: 20px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; {{#if plainHeaders}}font-size: 16px; line-height: 24px; color: {{brand.colors.text}}{{else}}font-size: 18px; line-height: 26px; color: {{brand.colors.headerText}}{{/if}}; padding-bottom: 12px;">
+                <strong>Order details</strong>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="width: 100%; table-layout: fixed;">
+                  <tr>
+                    <td width="14%" valign="bottom" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 16px; font-weight: bold; color: {{brand.colors.headerText}}; padding: 0 6px 8px 0; vertical-align: bottom;">
+                      User Name
+                    </td>
+                    <td width="12%" valign="bottom" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 16px; font-weight: bold; color: {{brand.colors.headerText}}; padding: 0 6px 8px 0; vertical-align: bottom;">
+                      Plan
+                    </td>
+                    <td width="12%" valign="bottom" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 16px; font-weight: bold; color: {{brand.colors.headerText}}; padding: 0 6px 8px 0; vertical-align: bottom;">
+                      Code
+                    </td>
+                    <td width="28%" valign="bottom" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 16px; font-weight: bold; color: {{brand.colors.headerText}}; padding: 0 6px 8px 0; vertical-align: bottom;">
+                      Description
+                    </td>
+                    <td width="14%" valign="bottom" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 16px; font-weight: bold; color: {{brand.colors.headerText}}; padding: 0 6px 8px 0; vertical-align: bottom;">
+                      Qty Status
+                    </td>
+                    <td width="20%" valign="bottom" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 16px; font-weight: bold; color: {{brand.colors.headerText}}; padding: 0 0 8px 0; vertical-align: bottom;">
+                      Estimated delivery date
+                    </td>
+                  </tr>
+                  {{> order-summary-line-row}}
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>

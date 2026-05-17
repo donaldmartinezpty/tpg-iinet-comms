@@ -1,0 +1,36 @@
+<tr>
+  <td style="padding: 0 0 20px;">
+    <table role="presentation" class="two-column-table" cellspacing="0" cellpadding="0" border="0" width="100%" style="width: 100%; max-width: 100%; table-layout: fixed;">
+      <tr>
+        <td class="two-column two-column-left" width="50%" valign="top" style="width: 50%; max-width: 50%; vertical-align: top; padding-right: 8px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="width: 100%; background-color: {{brand.colors.panelBackground}}; border-radius: 8px;">
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; {{#if plainHeaders}}font-size: 16px; line-height: 24px; color: {{brand.colors.text}}{{else}}font-size: 18px; line-height: 26px; color: {{brand.colors.headerText}}{{/if}}; padding: 20px 20px 8px;">
+                <strong>Your reference number</strong>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding: 0 20px 20px; word-wrap: break-word; overflow-wrap: break-word;">
+                %%REFERENCE_NUMBER%%
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td class="two-column two-column-right" width="50%" valign="top" style="width: 50%; max-width: 50%; vertical-align: top; padding-left: 8px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="width: 100%; background-color: {{brand.colors.panelBackground}}; border-radius: 8px;">
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; {{#if plainHeaders}}font-size: 16px; line-height: 24px; color: {{brand.colors.text}}{{else}}font-size: 18px; line-height: 26px; color: {{brand.colors.headerText}}{{/if}}; padding: 20px 20px 8px;">
+                <strong>Your delivery address</strong>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding: 0 20px 20px; word-wrap: break-word; overflow-wrap: break-word;">
+                %%DELIVERY_ADDRESS%%
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
