@@ -93,6 +93,15 @@ const CATEGORY_RULES = [
   { prefix: 'ucm-', category: 'Use - UCM' },
 ];
 
+// Legacy billing slugs hidden from preview index (v2 remains visible)
+const INDEX_HIDDEN_SLUGS = new Set([
+  'invoice-available-credit',
+  'invoice-available-zero',
+  'invoice-available-owing-direct-debit',
+  'invoice-available-owing-manual',
+  'invoice-email-failed-technical-issue',
+]);
+
 const CATEGORY_ORDER = [
   'Buy - NBN Order Accepted',
   'Buy - Opticomm Order Accepted',
@@ -311,7 +320,8 @@ function generateIndex(templates, sourceDocMap) {
       .replace(/\bFhp\b/gi, 'FHP');
   }
 
-  const sorted = [...templates].sort();
+  const visibleTemplates = templates.filter(t => !INDEX_HIDDEN_SLUGS.has(t));
+  const sorted = [...visibleTemplates].sort();
 
   const grouped = {};
   for (const t of sorted) {
@@ -324,7 +334,7 @@ function generateIndex(templates, sourceDocMap) {
   const remaining = Object.keys(grouped).filter(c => !CATEGORY_ORDER.includes(c)).sort();
   const allCategories = [...orderedCategories, ...remaining];
 
-  const totalCount = templates.length;
+  const totalCount = visibleTemplates.length;
 
   let brandSections = brands.map((brand, brandIdx) => {
     let catSections = allCategories.map((cat, catIdx) => {
