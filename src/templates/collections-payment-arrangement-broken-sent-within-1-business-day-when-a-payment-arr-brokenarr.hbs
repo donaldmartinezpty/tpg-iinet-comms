@@ -1,56 +1,35 @@
 {{> header title="Dishonoured payment arrangement"}}
 
 <tr>
-  <td style="padding: 20px {{brand.layout.horizontalPadding}};">
-    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+  <td style="padding: 20px {{brand.layout.horizontalPadding}} 24px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="{{brand.layout.twoColumn.tableWidth}}" class="two-column-table" style="max-width: 100%;">
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          Hi %%ACCOUNTTITLEFIRSTNAMELASTNAME%%
+        <td class="two-column-left" width="{{brand.layout.twoColumn.leftWidth}}" valign="top" style="padding-right: {{brand.layout.twoColumn.gutter}}px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          Hi %%NAME%%
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           Our records show that your existing payment arrangement has not been honoured, so it is no longer valid.
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           Please pay the overdue amount (shown below) today by calling %%COLLECTIONS_PHONE_NUMBER%% or online at {{brand.oneAppUrl}}.
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 26px; color: {{brand.colors.headerText}}; padding-bottom: 8px;">
-          <strong>Your payment details:</strong>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          If you have paid your overdue amount recently then thank you, and don't worry about reading on. <br /><br /><strong>Failure to pay the overdue amount within 10 business days will result in further collection action, and the service(s) on your account may be restricted.</strong> <br /><br />If you are experiencing financial hardship, please call us on {{brand.collections.financialHardshipPhone}} or email %%FHP_EMAIL%% to discuss your options for assistance. We’re available from 9am to 5pm AEST, Monday to Friday. You can read our Financial Hardship Policy at %%FHP_URL%%.
         </td>
       </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          Account number:	%%DCALCULATIONCOMMUNICATIONSE03ACCOUNTNOD%%
+          </table>
         </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          Overdue Amount:	$ %%DCALCULATIONCOMMUNICATIONSE23OVERDUE_AMOUNTD%%
-        </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          If you have paid your overdue amount recently then thank you, and don't worry about reading on. <br /><br /><strong>Failure to pay the overdue amount within 10 business days will result in further collection action, and the service(s) on your account may be restricted.</strong> <br /><br />If you are experiencing financial hardship, please call us on {{brand.support.financialHardship}} or email %%FHP_EMAIL%% to discuss your options for assistance. We’re available from 9am to 5pm AEST, Monday to Friday. You can read our Financial Hardship Policy at %%FHP_URL%%.
-        </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          %%HOW_TO_PAY_COMPONENT%%
-        </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          %%PAYMENT_SLIP_COMPONENT%%
-        </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          %%SECURITY_FOOTER_COMPONENT%%
+        <td class="two-column-right" width="{{brand.layout.twoColumn.rightWidth}}" valign="top" style="padding-left: {{brand.layout.twoColumn.gutter}}px;">
+          {{> collections-account-box}}
         </td>
       </tr>
     </table>
@@ -58,16 +37,19 @@
 </tr>
 
 <tr>
-  <td style="padding: 20px {{brand.layout.horizontalPadding}} 60px;">
+  <td style="padding: 0 {{brand.layout.horizontalPadding}} 38px;">
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}};">
           Thanks,<br>
-          Your {{brand.displayName}} Team
+          The {{brand.displayName}} Team
         </td>
       </tr>
     </table>
   </td>
 </tr>
 
-{{> footer}}
+{{> collections-how-to-pay}}
+{{> collections-payment-slip}}
+
+{{> collections-footer}}

@@ -1,85 +1,64 @@
 {{> header title="Notice of Pending Disconnection"}}
 
 <tr>
-  <td style="padding: 20px {{brand.layout.horizontalPadding}};">
-    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+  <td style="padding: 20px {{brand.layout.horizontalPadding}} 24px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="{{brand.layout.twoColumn.tableWidth}}" class="two-column-table" style="max-width: 100%;">
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          <strong>Customer Number: </strong>%%DCALCULATIONCOMMUNICATIONSL04ACCOUNTREFNOD%%
+        <td class="two-column-left" width="{{brand.layout.twoColumn.leftWidth}}" valign="top" style="padding-right: {{brand.layout.twoColumn.gutter}}px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          Hi %%NAME%%,
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          <strong>Overdue Amount: </strong>$ %%DCALCULATIONCOMMUNICATIONSL38OVERDUEAMOUNTD%%
-        </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          <strong>Total Balance: </strong>$ %%DCALCULATIONCOMMUNICATIONSL37ACCOUNTBALANCED%%
-        </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          Hi %%DCALCULATIONCOMMUNICATIONSL07SALUTATIOND%%,
-        </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           Your account is still overdue and scheduled for disconnection from %%DDMMYYYY%%
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           If we don't receive payment of the overdue amount (shown above) by this date, your service(s) will be disconnected.
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           We want to avoid this, so please make a payment today by calling {{brand.support.phone}} or online at %%ONEAPP_URL%%
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           If you have paid your account recently then thank you, and don’t worry about reading on.
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 26px; color: {{brand.colors.headerText}}; padding-bottom: 8px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; color: {{brand.colors.headerText}}; padding-bottom: 8px;">
           <strong>Failure to make payment of the overdue amount will result in the following:</strong>
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           <ul style="padding-left: 20px; margin: 0 0 20px 0;">
-            <li style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 8px;">All service(s) on your account will be disconnected. A disconnected phone service won’t be able to make emergency 000 calls (except approved mobile devices which can call 000 if your phone has power and you’re within the coverage of any Australian mobile network).  <br /></li>
-            <li style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 8px;">You will need to reapply for new services (subject to credit approval) which may incur costs. Your current plan and number might not be available if you reconnect later. Any promotional discount will be forfeited; and<br /></li>
-            <li style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 8px;">You may receive a final bill made up of any remaining monthly services and/or device/accessory charges. The full amount would be due and payable within 14 days from the date of issue.</li>
+            <li style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 8px;">All service(s) on your account will be disconnected. A disconnected phone service won’t be able to make emergency 000 calls (except approved mobile devices which can call 000 if your phone has power and you’re within the coverage of any Australian mobile network).  <br /></li>
+            <li style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 8px;">You will need to reapply for new services (subject to credit approval) which may incur costs. Your current plan and number might not be available if you reconnect later. Any promotional discount will be forfeited; and<br /></li>
+            <li style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 8px;">You may receive a final bill made up of any remaining monthly services and/or device/accessory charges. The full amount would be due and payable within 14 days from the date of issue.</li>
           </ul>
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          If you are experiencing financial hardship, please call us on {{brand.support.financialHardship}} or email %%FHP_EMAIL%% to discuss your options for assistance. We’re available from 9am to 5pm AEST, Monday to Friday. You can read our Financial Hardship Policy at %%FHP_URL%%.
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          If you are experiencing financial hardship, please call us on {{brand.collections.financialHardshipPhone}} or email %%FHP_EMAIL%% to discuss your options for assistance. We’re available from 9am to 5pm AEST, Monday to Friday. You can read our Financial Hardship Policy at %%FHP_URL%%.
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           Regards,
         </td>
       </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          %%HOW_TO_PAY_COMPONENT%%
+          </table>
         </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          %%PAYMENT_SLIP_COMPONENT%%
-        </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          %%SECURITY_FOOTER_COMPONENT%%
+        <td class="two-column-right" width="{{brand.layout.twoColumn.rightWidth}}" valign="top" style="padding-left: {{brand.layout.twoColumn.gutter}}px;">
+          {{> collections-account-box}}
         </td>
       </tr>
     </table>
@@ -87,16 +66,19 @@
 </tr>
 
 <tr>
-  <td style="padding: 20px {{brand.layout.horizontalPadding}} 60px;">
+  <td style="padding: 0 {{brand.layout.horizontalPadding}} 38px;">
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}};">
           Thanks,<br>
-          Your {{brand.displayName}} Team
+          The {{brand.displayName}} Team
         </td>
       </tr>
     </table>
   </td>
 </tr>
 
-{{> footer}}
+{{> collections-how-to-pay}}
+{{> collections-payment-slip}}
+
+{{> collections-footer}}

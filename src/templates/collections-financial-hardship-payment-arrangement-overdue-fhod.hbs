@@ -1,74 +1,63 @@
 {{> header title="Your Financial Hardship payment arrangement"}}
 
 <tr>
-  <td style="padding: 20px {{brand.layout.horizontalPadding}};">
-    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+  <td style="padding: 20px {{brand.layout.horizontalPadding}} 24px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="{{brand.layout.twoColumn.tableWidth}}" class="two-column-table" style="max-width: 100%;">
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          <strong>Customer Number: </strong>%%DCALCULATIONCOMMUNICATIONSL04ACCOUNTREFNOD%%
+        <td class="two-column-left" width="{{brand.layout.twoColumn.leftWidth}}" valign="top" style="padding-right: {{brand.layout.twoColumn.gutter}}px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          Hi %%NAME%%,
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          Hi %%DCALCULATIONCOMMUNICATIONSL07SALUTATIOND%%,
-        </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           Our records show that your payment arrangement is overdue.
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           We understand you’re having financial hardship, but it’s important that you make the payments on time.
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           Please pay the overdue amount of $ %%DCALCULATIONCOMMUNICATIONSL38OVERDUEAMOUNTD%% within 10 business days. Your minimum monthly charges will continue as per your contract.
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           If we haven’t received payment for the overdue amount within 10 business days, we’ll refer your account back to our Collections Team on %%DCALCULATIONCOMMUNICATIONSL48MOVETOCOLLDATED%% and this may affect other services on your account.
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          If you would like to discuss your situation, please call us on {{brand.support.financialHardship}}. You can call us from 9am to 5pm AEST, Monday to Friday. You can also contact the following organisations for support or advice:
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          If you would like to discuss your situation, please call us on {{brand.collections.financialHardshipPhone}}. You can call us from 9am to 5pm AEST, Monday to Friday. You can also contact the following organisations for support or advice:
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           <ul style="padding-left: 20px; margin: 0 0 20px 0;">
-            <li style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 8px;">Telecommunications Industry Ombudsman: 1800 062 058</li>
-            <li style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 8px;">National Debt Helpline: 1800 007 007<br /></li>
+            <li style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 8px;">Telecommunications Industry Ombudsman: 1800 062 058</li>
+            <li style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 8px;">National Debt Helpline: 1800 007 007<br /></li>
           </ul>
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           Regards,
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 26px; color: {{brand.colors.headerText}}; padding-bottom: 8px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; color: {{brand.colors.headerText}}; padding-bottom: 8px;">
           <strong>The {{brand.displayName}} Financial Hardship Team</strong>
         </td>
       </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          %%HOW_TO_PAY_COMPONENT%%
+          </table>
         </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          %%PAYMENT_SLIP_COMPONENT%%
-        </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          %%SECURITY_FOOTER_COMPONENT%%
+        <td class="two-column-right" width="{{brand.layout.twoColumn.rightWidth}}" valign="top" style="padding-left: {{brand.layout.twoColumn.gutter}}px;">
+          {{> collections-account-box}}
         </td>
       </tr>
     </table>
@@ -76,16 +65,19 @@
 </tr>
 
 <tr>
-  <td style="padding: 20px {{brand.layout.horizontalPadding}} 60px;">
+  <td style="padding: 0 {{brand.layout.horizontalPadding}} 38px;">
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}};">
           Thanks,<br>
-          Your {{brand.displayName}} Team
+          The {{brand.displayName}} Team
         </td>
       </tr>
     </table>
   </td>
 </tr>
 
-{{> footer}}
+{{> collections-how-to-pay}}
+{{> collections-payment-slip}}
+
+{{> collections-footer}}

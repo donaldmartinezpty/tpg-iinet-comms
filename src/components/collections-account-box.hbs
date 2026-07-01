@@ -1,0 +1,18 @@
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: {{brand.collections.cardBackground}}; border-radius: 10px;">
+  <tr>
+    <td style="padding: 22px 22px 18px; font-family: Arial, Helvetica, sans-serif; color: {{brand.colors.text}};">
+      <p style="margin: 0 0 10px 0; font-size: 14px; line-height: 18px; font-weight: bold;">Account number</p>
+      <p style="margin: 0 0 16px 0; font-size: 20px; line-height: 24px; word-break: break-word; overflow-wrap: break-word;">{{#if accountNumber}}{{accountNumber}}{{else}}%%ACCTNO%%{{/if}}</p>
+      <div style="height: 1px; line-height: 1px; background-color: #FFFFFF; margin: 0 0 16px 0;">&nbsp;</div>
+      <p style="margin: 0 0 10px 0; font-size: 14px; line-height: 18px; font-weight: bold; color: {{brand.collections.accentColor}};">Overdue amount</p>
+      <p style="margin: 0 0 18px 0; font-size: 20px; line-height: 24px; color: {{brand.collections.accentColor}}; word-break: break-word; overflow-wrap: break-word;">$ {{#if overdueAmount}}{{overdueAmount}}{{else}}%%AMOUNT%%{{/if}}</p>
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+          <td align="center" bgcolor="{{brand.collections.accentColor}}" style="border-radius: 9px;">
+            <a href="{{brand.collections.payUrl}}" style="display: block; padding: 14px 18px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 16px; font-weight: bold; color: #FFFFFF; text-decoration: none;">Pay Now</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

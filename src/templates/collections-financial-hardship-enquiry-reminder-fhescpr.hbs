@@ -1,56 +1,45 @@
 {{> header title="Your Financial Hardship enquiry"}}
 
 <tr>
-  <td style="padding: 20px {{brand.layout.horizontalPadding}};">
-    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+  <td style="padding: 20px {{brand.layout.horizontalPadding}} 24px;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="{{brand.layout.twoColumn.tableWidth}}" class="two-column-table" style="max-width: 100%;">
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          <strong>Customer Number: </strong>%%DCALCULATIONCOMMUNICATIONSL04ACCOUNTREFNOD%%
+        <td class="two-column-left" width="{{brand.layout.twoColumn.leftWidth}}" valign="top" style="padding-right: {{brand.layout.twoColumn.gutter}}px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          Hi %%NAME%%,
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          Hi %%DCALCULATIONCOMMUNICATIONSL07SALUTATIOND%%,
-        </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           This is a courtesy reminder regarding your recent financial hardship enquiry.
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           Please submit your enquiry to %%FHP_EMAIL%% within <strong>10 business days</strong> or we will be unable to assess your eligibility for assistance.
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          Should you have any questions or require assistance, please contact our team on {{brand.support.financialHardship}}. We’re here to help and happy to support you.
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+          Should you have any questions or require assistance, please contact our team on {{brand.collections.financialHardshipPhone}}. We’re here to help and happy to support you.
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           Regards,
         </td>
       </tr>
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}}; padding-bottom: 20px;">
           <br /><strong>The {{brand.displayName}} Financial Hardship Team</strong>
         </td>
       </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          %%HOW_TO_PAY_COMPONENT%%
+          </table>
         </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          %%PAYMENT_SLIP_COMPONENT%%
-        </td>
-      </tr>
-      <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}}; padding-bottom: 20px;">
-          %%SECURITY_FOOTER_COMPONENT%%
+        <td class="two-column-right" width="{{brand.layout.twoColumn.rightWidth}}" valign="top" style="padding-left: {{brand.layout.twoColumn.gutter}}px;">
+          {{> collections-account-box}}
         </td>
       </tr>
     </table>
@@ -58,16 +47,19 @@
 </tr>
 
 <tr>
-  <td style="padding: 20px {{brand.layout.horizontalPadding}} 60px;">
+  <td style="padding: 0 {{brand.layout.horizontalPadding}} 38px;">
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
       <tr>
-        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px; color: {{brand.colors.text}};">
+        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 17px; color: {{brand.colors.text}};">
           Thanks,<br>
-          Your {{brand.displayName}} Team
+          The {{brand.displayName}} Team
         </td>
       </tr>
     </table>
   </td>
 </tr>
 
-{{> footer}}
+{{> collections-how-to-pay}}
+{{> collections-payment-slip}}
+
+{{> collections-footer}}

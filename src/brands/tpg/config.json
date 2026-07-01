@@ -76,6 +76,18 @@
     "appStoreUrl": "#",
     "googlePlayUrl": "#"
   },
+  "collections": {
+    "accentColor": "#8725EE",
+    "cardBackground": "#F1F1F1",
+    "securityUrl": "https://support.tpg.com.au/security-information",
+    "footerEntity": "TPG Internet Pty Ltd ABN 15 068 383 737",
+    "payUrl": "https://tpg.com.au/myaccount",
+    "payLabel": "tpg.com.au/myaccount",
+    "toolboxLabel": "My TPG app",
+    "logoFooter": "img/tpg-logo-footer.png",
+    "phoneIcon": "img/tpg-icon-7.png",
+    "financialHardshipPhone": "1800 658 686"
+  },
   "oneAppUrl": "https://my.tpg.com.au",
   "company": {
     "name": "TPG Telecom Limited",

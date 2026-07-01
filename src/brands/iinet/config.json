@@ -75,6 +75,18 @@
     "appStoreUrl": "#",
     "googlePlayUrl": "#"
   },
+  "collections": {
+    "accentColor": "#FF6600",
+    "cardBackground": "#F1F1F1",
+    "securityUrl": "https://help.iinet.net.au/security-information",
+    "footerEntity": "iiNet Limited ACN 068 628 937",
+    "payUrl": "https://iinet.net.au/toolbox",
+    "payLabel": "iinet.net.au/toolbox",
+    "toolboxLabel": "My iiNet app",
+    "logoFooter": "img/iinet-logo-footer.png",
+    "phoneIcon": "img/iinet-icon-7.png",
+    "financialHardshipPhone": "1800 506 161"
+  },
   "oneAppUrl": "https://my.iinet.com.au",
   "company": {
     "name": "iiNet Limited",
